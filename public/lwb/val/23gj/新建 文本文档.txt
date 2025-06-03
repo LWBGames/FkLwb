@@ -1,0 +1,34 @@
+@echo off
+setlocal enabledelayedexpansion
+
+echo 正在清理文件名（去除空格和特殊字符，保留扩展名）...
+echo.
+
+for %%f in (*) do (
+    if not "%%f"=="%~nx0" (  :: 排除自身（bat文件）
+        set "filename=%%~nf"
+        set "extension=%%~xf"
+        
+        :: 仅保留字母、数字、下划线、短横线
+        set "newfilename="
+        for /f "delims=" %%c in ('cmd /u /c echo !filename! ^| find /v ""') do (
+            set "char=%%c"
+            if "!char!" geq "0" if "!char!" leq "9" set "newfilename=!newfilename!!char!"
+            if "!char!" geq "A" if "!char!" leq "Z" set "newfilename=!newfilename!!char!"
+            if "!char!" geq "a" if "!char!" leq "z" set "newfilename=!newfilename!!char!"
+            if "!char!"=="-" set "newfilename=!newfilename!!char!"
+            if "!char!"=="_" set "newfilename=!newfilename!!char!"
+        )
+
+        :: 如果新文件名为空，则使用默认名
+        if "!newfilename!"=="" set "newfilename=file"
+
+        :: 重命名文件
+        if not "!newfilename!!extension!"=="%%f" (
+            ren "%%f" "!newfilename!!extension!"
+        )
+    )
+)
+
+echo 处理完成！
+pause

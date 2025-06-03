@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.main {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  z-index: 3;
+}
+
+.clove {
+  position: fixed;
+  background-color: aliceblue;
+  opacity: 0.5;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  z-index: 2;
+}
+
+body {
+  position: relative;
+  background-color: black;
+  background-image: url(/imgs/44873217_p0.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.title {
+
+  transition: 0.5s;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+.start {
+  .lwb {
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: 10vh;
+    will-change: height;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+#sel {
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin: 0 0 2vh 0;
+  }
+
+  .hards {
+    display: flex;
+    gap: 2em;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.cap {
+  width: fit-content;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  box-sizing: border-box;
+
+  .box {
+    position: relative;
+    background-color: rgb(103, 128, 255);
+    padding: 0.5em;
+
+    border-radius: 0.5em;
+
+    .imgs {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1em;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      width: fit-content;
+      gap: 0.1em;
+
+      img {
+        position: relative;
+        transition: 0.5s;
+        box-sizing: border-box;
+        width: 2em;
+        flex: 1 0 calc(33.3333% - 0.3em);
+      }
+    }
+
+    .h11 {
+      position: absolute;
+      color: rgb(255, 14, 14);
+      left: 3em;
+      top: 4em;
+      z-index: 99;
+    }
+
+    .h11 {
+      position: absolute;
+      color: rgb(255, 14, 14);
+      left: 2.1em;
+      top: 4em;
+      z-index: 99;
+    }
+  }
+
+  .down {
+    width: 100%;
+    height: 2vh;
+    display: flex;
+    flex: 1;
+
+    a {
+      text-align: start;
+      align-self: start;
+      justify-self: flex-start;
+    }
+
+    button {
+      flex: 1;
+      border: none;
+      background-color: rgb(255, 255, 255);
+      border-radius: 0.5em;
+
+    }
+  }
+}
+
+.ac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seled {
+  transition: 0.5s;
+  padding: 0.5em;
+  opacity: 0.5;
+}
+
+.op {
+  transition: 0.5s;
+  opacity: 0.1;
+}
+
+.aim {
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  height: 5vh;
+}
+
+.stat {
+  pointer-events: none;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  bottom: 0;
+  height: 15vh;
+  z-index: 99999;
+
+
+  img {
+    transition: 0.5s;
+    height: 0;
+  }
+
+}
+
+.st1 {
+  height: 100%;
+}
+
+.over {
+  gap: 1em;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  span {
+    align-self: flex-start;
+  }
+
+  .but {
+    display: flex;
+    gap: 1em;
+
+    button {
+      border: none;
+      width: 6em;
+      height: 2em;
+    }
+  }
+
+  .cg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      color: #ff6f6f;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    height: 15vh;
+
+    img {
+      height: 100%;
+    }
+  }
+}

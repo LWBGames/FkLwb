@@ -1,6 +1,10 @@
 # fucklwb
 
-This template should help get you started developing with Vue 3 in Vite.
+一个点小球游戏
+
+# 谁是刘文博？
+
+是我的星怒
 
 ## Recommended IDE Setup
 
